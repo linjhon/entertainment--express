@@ -47,9 +47,10 @@ router.post('/register',function(req,res,next){
       return;
     }else{
       var conn = db.collection('user');
+      var name = req.body.name;
       var email = req.body.email;
       var password = req.body.password;
-      conn.save({email:email,password:password},function(err,results){
+      conn.save({name:name,email:email,password:password},function(err,results){
         console.log(results);
         res.redirect('/login');
       })

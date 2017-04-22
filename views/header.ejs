@@ -1,4 +1,4 @@
-<nav class="navbar  navbar-primary">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -20,8 +20,15 @@
         <li><a href="/book">图书频道</a></li>        
       </ul>      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login">登陆</a></li>
-        <li><a href="/register">注册</a></li>
+        <%if (email){ %>
+          <b style="color:white;display:inline-block;margin-top:13px;">
+            <span>你好,<%= email %></span>
+            <button><a href="/logout" style="color:black">注销</a></button>
+          </b>
+        <%} else {%>
+            <li><a href="/login">登陆</a></li>
+            <li><a href="/register">注册</a></li>
+        <%}%>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
