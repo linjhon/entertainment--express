@@ -33,3 +33,8 @@ body .navbar{
     text-align: center;
     background: #ffffff;
 }
+body .row{
+  margin:40px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
