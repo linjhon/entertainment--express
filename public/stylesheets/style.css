@@ -1,0 +1,25 @@
+
+
+
+body .navbar{
+  border-radius: 0;
+  margin-bottom:0;
+}
+
+/*banner 样式*/
+
+#myCarousel{
+  height:400px;
+}
+
+.carousel-inner{
+  height:400px;
+}
+.carousel-inner .item{
+  height:100%;
+  background-color: #ccc;
+}
+
+.carousel-inner .item img{
+  height:100%;
+}
