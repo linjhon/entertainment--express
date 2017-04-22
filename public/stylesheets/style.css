@@ -23,6 +23,30 @@ body .navbar{
 .carousel-inner .item img{
   height:100%;
 }
+
+
+
+#movie{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#movie .center{
+	text-align:center;
+}
+#movie .center img{
+	width: 150px;
+	height: 200px;
+	margin-top: 10px;
+}
+
+#navTab{
+	text-align: center;
+	padding-bottom:50px;
+}
+#navTab ul{
+	margin: 0 auto;
+}
 .main-header {
     padding-top: 62px;
     padding-bottom: 62px;
