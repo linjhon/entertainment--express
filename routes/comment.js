@@ -37,7 +37,7 @@ router.post('/submit',function(req,res,next){
         })
 
     } else {
-        res.send('<script>alert("session过期，重新登录");location.href="/login"</script>')
+        res.send('<script>alert("用户登录过期，请重新登录");location.href="/login"</script>')
     }
 })
 
