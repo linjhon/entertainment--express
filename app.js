@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var book = require('./routes/book');
 var movie = require('./routes/movie');
-var movie = require('./routes/music');
+var music = require('./routes/music');
 var app = express();
 
 // view engine setup
