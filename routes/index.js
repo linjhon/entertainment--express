@@ -14,4 +14,10 @@ router.get('/register',function(req,res,next){
   res.render('register',{});
 })
 
+router.get('/logout',function(req,res,next){
+  req.session.destroy(function(err){
+    res.redirect('/');
+  })
+})
+
 module.exports = router;
