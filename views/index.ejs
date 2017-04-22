@@ -5,7 +5,12 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <div>
+      <input type="button" value="登录" onclick="location.href='/login'">
+      <input type="button" value="注册" onclick="location.href='/register'">
+    </div>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <%= email %>
   </body>
 </html>
