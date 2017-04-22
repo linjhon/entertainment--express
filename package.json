@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor ./bin/www",
+    "hot": "webpack-dev-server --hot --inline",
+    "data": "cd src\\public\\data && json-server --watch info.json"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -15,12 +18,7 @@
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
+    "express-session": "^1.15.2",
     "mongodb": "^2.2.26"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "supervisor ./bin/www",
-    "hot": "webpack-dev-server --hot --inline",
-    "data": "cd src\\public\\data && json-server --watch info.json"
   }
 }
