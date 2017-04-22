@@ -28,3 +28,9 @@ a.先处理路由
 movie.js
 book.js
 music.js
+
+
+
+步骤：1. 先安装插件 cnpm i 
+步骤：2. 安装 supervisor 监听服务器；不用重新执行文件;
+步骤：3. 创建路由;
