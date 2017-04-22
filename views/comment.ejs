@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script type="text/javascript" src="/javascripts/xheditor/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/xheditor/xheditor-1.2.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/xheditor/xheditor_lang/zh-cn.js"></script>   
+  </head>
+  <body>
+
+  <%- include header %>
+   <%= title %>
+   <form action="/comment/submit" method="post" id="frmDemo">
+    标题:<input type="text" name="title"/>
+    <br/>
+    内容:<textarea rows="20" cols="80" name="content" id="content"></textarea>
+    <br/>
+    <br/>
+    <input type="submit" name="submit" value="提交">
+   </form>
+
+   <script type="text/javascript">
+    $(pageInit);
+    function pageInit()
+    {
+        $('#content').xheditor({
+            html5Upload:false,
+            upMultiple:'1',
+
+            upLinkUrl:"upload.php",
+            upLinkExt:"zip,rar,txt",
+
+            upImgUrl:"/uploadImg",
+            upImgExt:"jpg,jpeg,gif,png",
+            
+            upFlashUrl:"upload.php",
+            upFlashExt:"swf",
+            
+            upMediaUrl:"upload.php",
+            upMediaExt:"wmv,avi,wma,mp3,mid"
+        });
+      
+    }
+    </script>
+
+
+
+
+  </body>
+</html>
