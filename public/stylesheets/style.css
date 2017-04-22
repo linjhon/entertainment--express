@@ -47,7 +47,7 @@ body .navbar{
 }
 #navTab ul{
 	margin: 0 auto;
-=======
+}
 .main-header {
     padding-top: 62px;
     padding-bottom: 62px;
@@ -57,5 +57,5 @@ body .navbar{
     background-size: cover;
     text-align: center;
     background: #ffffff;
->>>>>>> 5050bf137751d664a52f3f7bcd2f3aa9f109c9fe
+    
 }
