@@ -34,3 +34,10 @@ music.js
 步骤：1. 先安装插件 cnpm i 
 步骤：2. 安装 supervisor 监听服务器；不用重新执行文件;
 步骤：3. 创建路由;
+
+
+
+连接数据库 ：
+
+var MongoClient = require('mongodb').MongoClient; // 引入mongodbClient客户端连接模块
+var DB_CONN_STR = 'mongodb://10.31.155.62:27017/movie'; // 设置连接字符串,后面代表所引用的集合;
