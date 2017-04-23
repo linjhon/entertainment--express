@@ -88,12 +88,16 @@ body .thumbnail{
    }
    .top{
      margin-top:20px;
+     }
 
    .lazy{
+     width:200px;
+     height:200px;
+   }
 
 
 .footer{
   height:50px;
   line-height:50px;
   background-color: #f5f5f5;
-
+}
