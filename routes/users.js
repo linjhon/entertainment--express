@@ -38,6 +38,7 @@ router.post('/login',function(req,res,next){
 
     }
   })
+  
 })
 
 router.post('/register',function(req,res,next){
@@ -56,6 +57,7 @@ router.post('/register',function(req,res,next){
       })
     }
   })
+  res.render('login', {email:req.session.email });
 })
 
 module.exports = router;

@@ -28,7 +28,8 @@ router.get('/', function(req, res, next) {
 
         
     }
-  })
-  res.render('music',{ title: title });
+  })  
+  //title值，请勿修改，头部组件判断使用;
+  res.render('music',{ title: 'music',email:req.session.email });
 });
 module.exports = router;

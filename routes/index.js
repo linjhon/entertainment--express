@@ -3,15 +3,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express',email:req.session.email });
+  res.render('index', { title: 'index',email:req.session.email });
 });
 
 router.get('/login',function(req,res,next){
-  res.render('login',{});
+  res.render('login',{email:req.session.email});
 })
 
 router.get('/register',function(req,res,next){
-  res.render('register',{});
+  res.render('register',{email:req.session.email});
 })
 
 router.get('/logout',function(req,res,next){
