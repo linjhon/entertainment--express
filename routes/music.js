@@ -12,9 +12,6 @@ router.get('/', function(req, res, next) {
         pageSize = 12,
         count = 0,
         totalPages = 0;
-
-
-
          var findData = function(db,callback){
             var conn = db.collection('music');
             
@@ -28,8 +25,6 @@ router.get('/', function(req, res, next) {
                         }else{
                             
                             totalPages = Math.ceil(results.length/pageSize);
-
-                           
                             count = results.length;
                             callback(null,'');
                         }
