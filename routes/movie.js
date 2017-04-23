@@ -7,11 +7,7 @@ var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy'; // 设置连接字符串
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-<<<<<<< .mine
-    res.render('movie', { title: "电影列表",email:req.session.email });
-=======
     res.render('movie', { title: "电影列表",email:req.session.email});
->>>>>>> .theirs
 });
 
 router.get('/moviedetail', function(req, res, next) {
