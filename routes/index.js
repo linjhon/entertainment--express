@@ -7,11 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login',function(req,res,next){
-  res.render('login',{email:req.session.email});
+  res.render('login',{title:'登陆',email:req.session.email});
 })
 
 router.get('/register',function(req,res,next){
-  res.render('register',{email:req.session.email});
+  res.render('register',{title:'注册',email:req.session.email});
 })
 
 router.get('/logout',function(req,res,next){
