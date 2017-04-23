@@ -13,29 +13,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <% if (title=="index"){ %>
-        <li class="active"><a href="/">首页</a></li>
-        <% }else{ %>
-        <li><a href="/">首页</a></li>
-        <% } %>
+        <li class="<%= title=="index" ?"active":"" %>"><a href="/">首页</a></li>
 
-        <% if (title=="movie"){ %>
-        <li class="active"><a href="/movie">电影频道</a></li>
-        <% }else{ %>
-        <li><a href="/movie">电影频道</a></li>
-        <% } %>
+        <li class="<%= title=="movie" ?"active":"" %>"><a href="/movie">电影频道</a></li>
 
-        <% if (title=="music"){ %>
-        <li class="active"><a href="/music">音乐频道</a></li>
-        <% }else{ %>
-        <li><a href="/music">音乐频道</a></li>
-        <% } %>
+        <li class="<%= title=="music" ?"active":"" %>"><a href="/music">音乐频道</a></li>
 
-        <% if (title=="book"){ %>
-        <li class="active"><a href="/book">图书频道</a></li>
-        <% }else{ %>
-        <li><a href="/book">图书频道</a></li>
-        <% } %>
+        <li class="<%= title=="book" ?"active":"" %>"><a href="/book">图书频道</a></li>
       </ul>      
       <ul class="nav navbar-nav navbar-right">
         <% if (email){ %>
@@ -50,16 +34,8 @@
               </ul>
             </li>
         <% } else { %>
-            <% if (title=="登陆"){ %>
-              <li class="active"><a href="/login">登陆</a></li>
-            <% }else{ %>
-              <li><a href="/login">登陆</a></li>
-            <% } %>
-            <% if (title=="注册"){ %>
-              <li class="active"><a href="/register">注册</a></li>
-            <% }else{ %>
-              <li><a href="/register">注册</a></li>
-            <% } %>
+              <li class="<%= title=="登陆" ?"active":"" %>"><a href="/login">登陆</a></li>
+              <li class="<%= title=="注册" ?"active":"" %>"><a href="/register">注册</a></li>
         <% } %>        
       </ul>
     </div><!-- /.navbar-collapse -->
