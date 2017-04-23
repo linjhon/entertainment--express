@@ -56,8 +56,7 @@ router.get('/list',function(req,res){
 
          var findData = function(db,callback){
             var conn = db.collection('comment');
-            
-            // 其实要做2件事，一件是查询列表数据，一件统计总记录
+
 
             async.parallel([
                 function(callback){
