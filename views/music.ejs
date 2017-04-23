@@ -32,6 +32,25 @@
         </div>
      <%})%>
     </div>
+    <nav aria-label="..." class="container text-center">
+      <ul class="pagination">
+        <li class="">
+          <a href="./music?pageNo=<%= pageNo > 1 ? parseInt(pageNo)-1: 1 %>">
+              上一页
+          </a>
+        </li>
+        <% for(var i=1;i<=totalPages;i++){ %>
+             <li class="<%- i==pageNo? 'active':'' %>">
+                <a href="./music?pageNo=<%= i %>" ><%- i %></a href="">
+              </li>
+        <%}%>
+        <li class="">
+          <span>
+            <a aria-hidden="true" href="./music?pageNo=<%= pageNo < totalPages ? parseInt(pageNo)+1: totalPages %>">下一页</a>
+          </span>
+        </li>
+      </ul>
+    </nav>
     <%- include footer %>
     <script src="/javascripts/jquery-1.11.3.js"></script>
     <script src="/javascripts/jquery.lazyload.js"></script>
