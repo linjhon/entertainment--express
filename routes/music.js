@@ -29,6 +29,6 @@ router.get('/', function(req, res, next) {
         
     }
   })
-  res.render('music',{ title: title });
+  res.render('music',{ title: title,email:req.session.email });
 });
 module.exports = router;
