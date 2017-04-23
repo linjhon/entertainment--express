@@ -48,6 +48,7 @@ body .navbar{
 #navTab ul{
 	margin: 0 auto;
 }
+/*music*/
 .main-header {
     padding-top: 62px;
     padding-bottom: 62px;
@@ -63,3 +64,29 @@ body .row{
   margin-right: 40px;
   margin-left: 40px;
 }
+.col-sm-12 h3{
+  color: white;
+  font-size: 50px
+}
+body .thumbnail{
+  border:0;
+  background:#fbfbfd;
+  text-align: center;
+}
+.thumbnail img{
+    display: block;
+    width: 140px;
+    height: 140px;
+    border-radius: 126px;
+  }
+  .thumbnail a{
+    font-size: 16px;
+    color: #000;
+  }
+   .thumbnail a:hover{
+     color: #31c27c;
+     text-decoration: none;
+   }
+   .top{
+     margin-top:20px;
+   }
