@@ -12,23 +12,21 @@ router.get('/', function(req, res, next) {
       return;
     }else{ // 如果连接成功，则执行下面代码 
     
-      var conn = db.collection('movie');
+      var conn = db.collection('music');
       conn.find().toArray(function(err,results){
        if(err){
          console.log(err)
          return;
        }else{
-        
-        title=results[0].title;
-        console.log(title)
-
+         res.render('music',{ title: 'music',list:results,email:req.session.email });
          db.close();
        }
      });
 
         
     }
-  })
-  res.render('music',{ title: title });
+  })  
+  //title值，请勿修改，头部组件判断使用;
+ 
 });
 module.exports = router;
