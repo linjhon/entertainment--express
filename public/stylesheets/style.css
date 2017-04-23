@@ -89,3 +89,6 @@ body .thumbnail{
    .top{
      margin-top:20px;
    }
+   .lazy{
+     height: 200px;
+   }
