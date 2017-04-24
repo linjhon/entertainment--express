@@ -5,25 +5,30 @@
 	<title>Document</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <script type="text/javascript" src="/javascripts/xheditor/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/xheditor/xheditor-1.2.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/xheditor/xheditor_lang/zh-cn.js"></script>
 </head>
 <body>
+    
     <div class="caption col-md-6"><h3 class="h3"><strong><%= results.title %></strong></h3></div>
     <div class="col-sm-6 col-md-12 center">
 	    <div class="thumbnail center">
-	      <div class="caption col-md-6">
-            <div class="box col-md-6"><img width="200" height="250"  src="<%- results.images.large %>" /></div>
+	      <div class="caption col-md-8">
+            <div class="box col-md-8"><img width="200" height="250"  src="<%- results.images.large %>" /></div>
 	        <p>作者：<strong><%= results.author %></strong></p>
             <% if(results.publisher){ %>
                 <p>出版社：<strong><%= results.publisher %></strong></p> 
             <% } %>
             <p>出版年：<strong><%= results.pubdate %></strong></p>
-            <p>页数：<strong><%= results.pages %>元</strong></p>
+            <p>页数：<strong><%= results.pages %></strong></p>
             <p>定价：<strong><%= results.price %>元</strong></p>
             <p>装帧：<strong><%= results.binding %></strong></p>
                      
 	      </div>
-          <div class="caption col-md-8">内容简介：<strong><%= results.summary %></strong></div>
+          <div class="caption col-md-12">内容简介：<strong><%= results.summary %></strong></div>
 	    </div>
 	  </div>
+      <div class="btn col-md-12"><input type="button" value="我来说两句" onclick="location.href='/comment'"></div>
 </body>
 </html>
