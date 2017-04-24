@@ -4,8 +4,8 @@ var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
 var async=require('async');
 var app = express();
-var http =require('http')
-var request=require('request')
+var http =require('http');
+var request=require('request');
 
 
 /* GET home page. */
