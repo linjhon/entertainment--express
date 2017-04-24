@@ -10,7 +10,8 @@
     <script type="text/javascript" src="/javascripts/xheditor/xheditor_lang/zh-cn.js"></script>
 </head>
 <body>
-    
+    <%- include header %>
+    <div class="container has-header">
     <div class="caption col-md-6"><h3 class="h3"><strong><%= results.title %></strong></h3></div>
     <div class="col-sm-6 col-md-12 center">
 	    <div class="thumbnail center">
@@ -30,5 +31,6 @@
 	    </div>
 	  </div>
       <div class="btn col-md-12"><input type="button" value="我来说两句" onclick="location.href='/comment'"></div>
+    </div>
 </body>
 </html>
