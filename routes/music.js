@@ -80,4 +80,32 @@ router.get('/', function(req, res, next) {
   //title值，请勿修改，头部组件判断使用;
  
 });
+router.get('/musicdetail', function(req, res, next) {
+  MongoClient.connect(DB_CONN_STR,function(err,db){ // 利用客户端连接模块进行connect连接操作
+    if(err){
+      console.log(err);
+      return;
+    }else{ // 如果连接成功，则执行下面代码 
+    
+      var conn = db.collection('music');
+      console.log(req.query)
+      conn.find(req.query).toArray(function(err,results){
+       if(err){
+         console.log(err)
+         return;
+       }else{
+        
+        //console.log(results)
+         res.render('musicdetail', {results:results[0]});
+         db.close();
+       }
+     });
+
+        
+    }
+  })  
+
+  //console.log(req.query.id)
+    //res.render('musicdetail', {id:req.query.id});
+});
 module.exports = router;
