@@ -154,7 +154,7 @@ body .thumbnail{
 }
 
 
-<<<<<<< HEAD
+
 /*评论页面css--header*/
 
   .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
@@ -182,7 +182,7 @@ body .thumbnail{
 
 /*评论页面css--footer*/
 
-=======
+
 /*评论页面css*/
 .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
 .commentList .avatar{border: 1px solid transparent;float: left}
@@ -207,7 +207,7 @@ body .thumbnail{
 	.comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
 	.comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
 /* BOOK-起点 */
->>>>>>> 7abaab414727a3e5204d230a044a811067cf02de
+
 #book{
   width: 1000px;
   margin: 0 auto;
@@ -245,9 +245,9 @@ body .thumbnail{
   background-repeat: no-repeat;
   height: 300px; 
 }
-<<<<<<< HEAD
+
 /*BOOK-到此*/
-=======
+
 
 
 >>>>>>> 72c0f229d0676cb3a740311c885fe7ef08eec74e
@@ -257,10 +257,7 @@ body .thumbnail{
         left: 50%;
         margin-top:20px
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 72c0f229d0676cb3a740311c885fe7ef08eec74e
 
 
 
@@ -270,7 +267,7 @@ body .thumbnail{
 	position:relative;
 	width:100%;  
 	height:100%
-	_overflow:hidden
+	
 }
 .site-piclist_pic_link {
 	display:block;
