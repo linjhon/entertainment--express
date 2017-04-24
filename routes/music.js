@@ -58,8 +58,6 @@ router.get('/', function(req, res, next) {
          return;
        }else{
          findData(db,function(results){
- 
-
             console.log(pageNo,totalPages,count)
             res.render('music',{
                 title: 'music',

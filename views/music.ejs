@@ -20,9 +20,9 @@
       <% list.forEach(function(item,idx){ %>
         <div class="col-sm-4 col-md-3 col-xs-6">
           <div class="thumbnail">
-            <img class="lazy" width="200" height="200" src="/images/upload/load.jpg" data-original="<%- item.pic_big %>" id="<%- item.artist_id %>">
+            <img class="lazy" width="200" height="200" src="/images/upload/load.jpg" data-original="<%- item.pic_big %>"">
             <div class="caption top">
-              <a href=""><%- item.title %></a>
+              <a href="./musicdetail?id=<%= item._id %>"><%- item.title %></a>
             </div>
           </div>
         </div>
