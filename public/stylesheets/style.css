@@ -36,13 +36,34 @@ body .navbar{
 
 
 .movie-header{
-  background-size:  100%;
+  background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
   height: 300px;
 }
+.movie-header .search{
+  margin-top: 100px;
+  display: flex;
+}
+.movie-header .search button{
+  margin-left: 10px;
+  color: #fff;
+  background: none;
+  height: 25px;
+  border: 0;
+  top: 0;
+}
+.movie-header .input{
+  height: 25px;
+  border: 0;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.movie-header .h3{
+  white-space: nowrap;
+}
 #movie{
-	width: 1000px;
+	width: 90%;
 	margin: 0 auto;
 	padding: 50px 0;
 }
@@ -129,7 +150,10 @@ body .thumbnail{
   line-height:50px;
   background-color: #f5f5f5;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0cdf3d35645a3a03c94e57f014c6730d4d44cf7f
 /*评论页面css*/
 .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
 .commentList .avatar{border: 1px solid transparent;float: left}
@@ -145,10 +169,17 @@ body .thumbnail{
 .comment-body{padding:15px;overflow:hidden}
 .comment-body>:last-child{margin-bottom:0}
 .commentList .comment-flip .avatar {float: right}
+<<<<<<< HEAD
 .comment-flip .comment-main{margin-left: 0; margin-right: 64px}
 .comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
 .comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
 .comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
+=======
+	.comment-flip .comment-main{margin-left: 0; margin-right: 64px}
+	.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
+	.comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
+	.comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
+>>>>>>> 0cdf3d35645a3a03c94e57f014c6730d4d44cf7f
 #book{
   width: 1000px;
   margin: 0 auto;
@@ -170,8 +201,7 @@ body .thumbnail{
   height: 200px;
 }
 #book .center .h4{
-  height: 40px;
-  line-height: 20px;
+  height: 22px;
   font-size: 18px;
 }
 #book .center .a{
@@ -181,7 +211,8 @@ body .thumbnail{
   margin-top: 10px;
 }
 .book-header{
-  background-size:  100%;
+
+  background-size:cover;
   background-position: 0 bottom;
   background-repeat: no-repeat;
   height: 300px; 

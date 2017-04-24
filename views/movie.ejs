@@ -11,7 +11,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h3>电影资讯</h3>
+                    <h3 class="h3">电影资讯</h3>
+                    <div class="search"><input class="input" type="search" /><button class="glyphicon glyphicon-search"></button></div>
                 </div>
             </div>
         </div>
@@ -25,7 +26,7 @@
 	      <div class="caption">
 	        <h4 class="h4"><%- item.title %></h4>
 	        <p>评分：<%- item.rating.average %></p>
-	        <p><a href="./moviedetail?id=<%= item.id %>" class="btn btn-primary a" role="button">查看详情</a></p>
+	        <p><a href="./movie/moviedetail?id=<%= item.id %>" class="btn btn-primary a" role="button">查看详情</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -58,8 +59,32 @@
     <script src="/javascripts/bootstrap.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(function() {
-          $("img.box").lazyload({effect: "fadeIn",container:$('#movie')});
-      }); 
+        $("img.box").lazyload({effect: "fadeIn",container:$('#movie')});
+
+       /* $(".input").on('keyup', function(event) {
+        	var $value=$(this).val();
+        	console.log($value);
+          	$.ajax({
+				type:"get",
+				url:"./public/php/search.php",
+				data:"data="+$value,
+				success:function (res) {
+					//$res=JSON.parse(res);
+					console.log(res);
+					//var $str='';
+					if ($d.data) {
+						for(var i=0;i<$d.data.length;i++){
+							$str+='<dd><a href="http://you.163.com/search?keyword='+$d.data[i]+'#page=1">'+$d.data[i]+'</a></dd>';
+						}
+					} else{
+						$str='';
+					}
+					that.dl.stop(true).fadeIn(200);
+					that.dl.html($str);
+				}
+			});
+        });*/
+      });
     </script>
   </body>
 </html>
