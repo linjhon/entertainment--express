@@ -20,6 +20,7 @@
   "devDependencies": {
     "async": "^2.3.0",
     "express-session": "^1.15.2",
-    "mongodb": "^2.2.26"
+    "mongodb": "^2.2.26",
+    "querystring": "^0.2.0"
   }
 }
