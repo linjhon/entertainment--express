@@ -34,60 +34,58 @@ body .navbar{
 }
 
 
-/*电影before*/
-  .movie-header{
-    background-size: cover;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    height: 300px;
-  }
-  .movie-header .search{
-    margin-top: 100px;
-    display: flex;
-  }
-  .movie-header .search button{
-    margin-left: 10px;
-    color: #fff;
-    background: none;
-    height: 25px;
-    border: 0;
-    top: 0;
-  }
-  .movie-header .input{
-    height: 25px;
-    border: 0;
-    padding: 0 10px;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  .movie-header .h3{
-    white-space: nowrap; 
-  }
-  #movie{
-    width: 90%;
-    margin: 0 auto;
-    padding: 50px 0;
-  }
-  #movie .center{
-    text-align:center;
-    overflow: hidden;
-  }
-  #movie .center .box{
-    width: 150px;
-    height: 200px;
-  }
-  #movie .center .h4{
-    height: 40px;
-    line-height: 20px;
-    font-size: 18px;
-  }
-  #movie .center .a{
-    color: #fff;
-  }
-  #movie .center img{
-    margin-top: 10px;
-  }
-/*电影after*/
 
+.movie-header{
+  background-size: cover;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.movie-header .search{
+  margin-top: 100px;
+  display: flex;
+}
+.movie-header .search button{
+  margin-left: 10px;
+  color: #fff;
+  background: none;
+  height: 25px;
+  border: 0;
+  top: 0;
+}
+.movie-header .input{
+  height: 25px;
+  border: 0;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.movie-header .h3{
+  white-space: nowrap;
+}
+#movie{
+	width: 90%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#movie .center{
+	text-align:center;
+  overflow: hidden;
+}
+#movie .center .box{
+  width: 150px;
+  height: 200px;
+}
+#movie .center .h4{
+  height: 40px;
+  line-height: 20px;
+  font-size: 18px;
+}
+#movie .center .a{
+  color: #fff;
+}
+#movie .center img{
+	margin-top: 10px;
+}
 
 #navTab{
 	text-align: center;
@@ -154,7 +152,6 @@ body .thumbnail{
 }
 
 
-
 /*评论页面css--header*/
 
   .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
@@ -181,36 +178,7 @@ body .thumbnail{
     .comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
 
 /*评论页面css--footer*/
-
-
-
-/*评论页面css*/
-  .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
-  .commentList .avatar{border: 1px solid transparent;float: left}
-  .comment-main{position:relative;margin-left:64px;border:1px solid #dedede;border-radius:2px}
-  .comment-main:before,.comment-main:after{position:absolute;top:11px;left:-16px;right:100%;width:0;height:0;display:block;content:" ";border-color:transparent;border-style:solid solid outset;pointer-events:none}
-  .comment-main:before{border-right-color:#dedede;border-width:8px}
-  .comment-main:after{border-width:7px;border-right-color:#f8f8f8;margin-top:1px;margin-left:2px}
-  .comment-header{padding:10px 15px;background:#f8f8f8;border-bottom:1px solid #eee}
-  .comment-title{margin:0 0 8px 0;font-size:1.6rem;line-height:1.2}
-  .comment-meta{font-size:13px;color:#999;line-height:1.2}
-  .comment-meta a{color:#999}
-  .comment-author{font-weight:700;color:#999}
-  .comment-body{padding:15px;overflow:hidden}
-  .comment-body>:last-child{margin-bottom:0}
-  .commentList .comment-flip .avatar {float: right}
-  .comment-flip .comment-main{margin-left: 0; margin-right: 64px}
-  .comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
-  .comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
-  .comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
-    .comment-flip .comment-main{margin-left: 0; margin-right: 64px}
-    .comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
-    .comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
-    .comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
-
-
 /* BOOK-起点 */
-
 
 #book{
   width: 1000px;
@@ -251,14 +219,12 @@ body .thumbnail{
 }
 
 /*BOOK-到此*/
-
-
-
 .middle{
         position: absolute;
         left: 50%;
         margin-top:20px
   }
+
 
 
   /*首页电影*/
@@ -267,7 +233,7 @@ body .thumbnail{
 	position:relative;
 	width:100%;  
 	height:100%
-	
+
 }
 .site-piclist_pic_link {
 	display:block;
@@ -279,7 +245,7 @@ body .thumbnail{
 	width:100%;
 	height:100%;
 }
-  /*电影信息 begin*/
+  /*电影信息*/
   .site-piclist_info {
 	line-height:20px;
 	padding:7px 5px 0;
@@ -309,12 +275,13 @@ body .thumbnail{
 	color:#699f00
 }
 .site-piclist_info_describe .icon-user {
+	background:url(//www.qiyipic.com/common/fix/site/icon-user.png) no-repeat 0 0;
 	width:11px;
 	height:11px;
 	margin-right:5px;
 	display:inline-block;
 	vertical-align:middle;
-	_margin-top:5px
+	margin-top:5px
 }
 
 .site-piclist .site-title_score {
@@ -353,20 +320,3 @@ body .thumbnail{
   border-radius: 3px;
   font-family: Georgia;
 }
-
-/*电影信息 end*/
-
-
-
-
-
-
-
-
-
-/*电影详情页 start*/
-
-
-
-
-/*电影详情页 end*/
