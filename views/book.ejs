@@ -7,11 +7,11 @@
   </head>
   <body>
   <%- include header %>
-    <header class="main-header" style="background-image: url(images/1492673792372face02.jpg)">
+    <header class="book-header" style="background-image: url(https://img3.doubanio.com/view/activity_page/raw/public/p1091.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12"> 
-                    <h3>热门电子版书籍</h3>
+                    <h3 style="opacity: 1;">电子书籍</h3>
                 </div>
             </div>
         </div>
@@ -24,7 +24,11 @@
 	      <div class="box"><img  src="/images/book-loading1.gif" data-original="<%= item.images.large %>" id="<%- item.id %>" /></div>
 	      <div class="caption">
 	        <h5 class="h4">《<%- item.title %>》</h5>
+<<<<<<< HEAD
 	        <p><a href="./book/bookdetail?id=<%= item.id %>" class="btn btn-primary a" role="button">查看详情</a></p>
+=======
+	        <p><a href="#" class="btn btn-success a" role="button">查看详情</a></p>
+>>>>>>> db528b6e7cefc4a655d66ce49d635b627f7c131c
 	      </div>
 	    </div>
 	  </div>
