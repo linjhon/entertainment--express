@@ -30,7 +30,9 @@ router.post('/login',function(req,res,next){
             req.session.email = results[0].email;
             res.redirect('/');
           }else{
-            console.log('email or password is not exits,please try again')
+            //console.log('email or password is not exits,please try again')
+             res.send('<script>alert("账号或密码错误，请重新登录");location.href="/login"</script>')
+
           }
           db.close();
         }
@@ -53,11 +55,10 @@ router.post('/register',function(req,res,next){
       var password = req.body.password;
       conn.save({name:name,email:email,password:password},function(err,results){
         console.log(results);
-        res.redirect('/login');
       })
     }
   })
-  res.render('login', {email:req.session.email });
+  res.send('<script>alert("注册成功，请登录");location.href="/login"</script>')
 })
 
 module.exports = router;
