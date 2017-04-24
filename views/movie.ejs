@@ -10,7 +10,7 @@
     <header class="movie-header" style="background-image: url(images/movie-banner.jpg)">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12"> 
+                <div class="col-sm-12">
                     <h3>电影资讯</h3>
                 </div>
             </div>
@@ -21,11 +21,11 @@
 	 <% list.forEach(function(item,idx){ %>
 	  <div class="col-sm-6 col-md-3 center">
 	    <div class="thumbnail">
-	      <div class="box"><img src="/images/movie-loading1.gif" data-original="<%= item.images.large %>" id="<%- item.id %>" /></div>
+	      <img class="box" src="/images/movie-loading1.gif" data-original="<%= item.images.large %>" id="<%- item.id %>" />
 	      <div class="caption">
 	        <h4 class="h4"><%- item.title %></h4>
 	        <p>评分：<%- item.rating.average %></p>
-	        <p><a href="#<%- item.id %>" class="btn btn-primary a" role="button">查看详情</a></p>
+	        <p><a href="./moviedetail?id=<%= item.id %>" class="btn btn-primary a" role="button">查看详情</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -58,7 +58,7 @@
     <script src="/javascripts/bootstrap.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(function() {
-          $("img").lazyload({effect: "fadeIn",container:$('#movie')});
+          $("img.box").lazyload({effect: "fadeIn",container:$('#movie')});
       }); 
     </script>
   </body>
