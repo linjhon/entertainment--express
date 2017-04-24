@@ -183,7 +183,7 @@ body .thumbnail{
 /* BOOK-起点 */
 
 #book{
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
   padding: 50px 0;
 }
@@ -195,12 +195,13 @@ body .thumbnail{
   width: 150px;
   height: 200px;
   text-align: center;
-  overflow: hidden;
   margin: 0 auto;
 }
 #book .center .box img{
   width: 150px;
   height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #book .center .h4{
   height: 22px;
