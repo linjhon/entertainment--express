@@ -50,6 +50,7 @@ app.use('/book', book);
 app.use('/music', music);
 app.use('/movie', movie);
 app.use('/comment',comment);
+//app.use('/commentlist',commentlist);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
