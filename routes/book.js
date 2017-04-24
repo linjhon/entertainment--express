@@ -73,6 +73,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/bookdetail', function(req, res, next) {
   req.session.type="bookdetail"
+  
   MongoClient.connect(DB_CONN_STR,function(err,db){ // 利用客户端连接模块进行connect连接操作
     var detailData={}
     if(err){
@@ -81,7 +82,7 @@ router.get('/bookdetail', function(req, res, next) {
     }else{ // 如果连接成功，则执行下面代码 
     
       var conn = db.collection('book');
-      console.log(req.query)
+      //console.log(req.query)
       //查找书籍信息
       conn.find(req.query).toArray(function(err,results){
        if(err){
@@ -104,7 +105,7 @@ router.get('/bookdetail', function(req, res, next) {
         type:req.session.type
       }
        var commentConn = db.collection('comment');
-      commentConn.find(req.query).toArray(function(err,results){
+      commentConn.find(req.query).sort({_id:-1}).toArray(function(err,results){
        if(err){
          console.log(err)
          return;
@@ -118,7 +119,7 @@ router.get('/bookdetail', function(req, res, next) {
         }
 
          res.render('bookdetail',detailData);
-         console.log(detailData.comment);
+         //console.log(detailData.comment);
          db.close();
        }
      });

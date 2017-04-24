@@ -5,7 +5,7 @@ var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
 var async = require('async');
 
 router.get('/', function(req, res, next) {  // controller
-    console.log(req.query);
+    //console.log(req.query);
     var email = req.session.email;
     if(email){
 
@@ -13,7 +13,8 @@ router.get('/', function(req, res, next) {  // controller
             var conn = db.collection('comment');
             var data = req.query;
             data.email=req.session.email;
-            console.log(data);
+            data.date=new Date().toLocaleDateString()+' '+new Date().getHours()+':'+new Date().getMinutes()+':'+new Date().getSeconds();
+            //console.log(data);
             conn.insert(data,function(err,results){
                 if(err) return;
                 callback(results);

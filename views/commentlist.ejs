@@ -14,12 +14,12 @@
                     <div class="comment-main">
                     <header class="comment-header">
                         <div class="comment-meta"><a class="comment-author" href="#"><%= item.email %></a> 评论于
-                        <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20">2014-8-31 15:20</time>
+                        <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20"><%= item.date %></time>
                         </div>
                     </header>
                     <div class="comment-body">
                         <h4><%= item.title %> </h4>
-                        <p><%= item.content %> </p>
+                        <p><%- item.content %> </p>
                     </div>
                     </div>
                 </li>
