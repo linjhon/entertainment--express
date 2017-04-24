@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
-var async=require('async')
+var async=require('async');
+var app = express();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -70,7 +71,7 @@ router.get('/', function(req, res, next) {
             db.close();
         })
          //res.render('music',{ title: 'music',list:results,email:req.session.email });
-      
+        
        }
      });
 
@@ -81,31 +82,42 @@ router.get('/', function(req, res, next) {
  
 });
 router.get('/musicdetail', function(req, res, next) {
+
   MongoClient.connect(DB_CONN_STR,function(err,db){ // 利用客户端连接模块进行connect连接操作
     if(err){
       console.log(err);
       return;
-    }else{ // 如果连接成功，则执行下面代码 
-    
+    }else{ // 如果连接成功，则执行下面代码
+      // app.all('*', function(req, res, next) {
+      //     res.header("Access-Control-Allow-Origin", "*");
+      //     res.header("Access-Control-Allow-Headers", "X-Requested-With");
+      //     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+      //     res.header("X-Powered-By",' 3.2.1')
+      //     res.header("Content-Type", "application/json;charset=utf-8");
+      //     next();
+      // });
+      //  app.get('http://tingapi.ting.baidu.com/v1/restserver/ting', function(req, res) {
+      //      res.send();
+      //      console.log('success')
+      //  });
+      //  // app.listen(3000);
+
       var conn = db.collection('music');
-      console.log(req.query)
+      console.log(req.query);
+      //通过id查找相关数据
       conn.find(req.query).toArray(function(err,results){
        if(err){
          console.log(err)
          return;
        }else{
-        
+        console.log(results)
+         res.render('musicdetail', {results:results[0],email: req.session.email,title:'details'});
         //console.log(results)
-         res.render('musicdetail', {results:results[0]});
          db.close();
        }
      });
-
-        
     }
   })  
-
-  //console.log(req.query.id)
-    //res.render('musicdetail', {id:req.query.id});
+  // res.render('musicdetail', {email: req.session.email,title:'details');
 });
 module.exports = router;
