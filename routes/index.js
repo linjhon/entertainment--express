@@ -5,6 +5,7 @@ var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+
   MongoClient.connect(DB_CONN_STR, function (err, db) { // 利用客户端连接模块进行connect连接操作
     if (err) {
       res.render('index', {
@@ -68,6 +69,12 @@ router.get('/register', function (req, res, next) {
 router.get('/logout', function (req, res, next) {
   req.session.destroy(function (err) {
     res.redirect('/');
+  })
+})
+router.get('/commentlist', function (req, res, next) {
+  res.render('commentlist', {
+    title: '评论列表',
+    email: req.session.email
   })
 })
 

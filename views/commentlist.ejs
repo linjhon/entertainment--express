@@ -8,21 +8,28 @@
     </head>
     <body>
        <ul class="commentList">
-            <li class="item cl"> <a href="#"><i class="avatar size-L radius"><img alt="" src="http://static.h-ui.net/h-ui/images/ucnter/avatar-default.jpg"></i></a>
-                <div class="comment-main">
-                <header class="comment-header">
-                    <div class="comment-meta"><a class="comment-author" href="#">辉哥</a> 评论于
-                    <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20">2014-8-31 15:20</time>
+            <% if(comment){ %>   
+                <% comment.forEach(function(item,idx){ %>         
+                <li class="item cl"> <a href="#"><i class="avatar size-L radius"><img alt="" src="http://static.h-ui.net/h-ui/images/ucnter/avatar-default.jpg"></i></a>
+                    <div class="comment-main">
+                    <header class="comment-header">
+                        <div class="comment-meta"><a class="comment-author" href="#"><%= item.email %></a> 评论于
+                        <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20"><%= item.date %></time>
+                        </div>
+                    </header>
+                    <div class="comment-body">
+                        <h4><%= item.title %> </h4>
+                        <p><%- item.content %> </p>
                     </div>
-                </header>
-                <div class="comment-body">
-                    <p><a href="#">@某人</a> 你是猴子派来的救兵吗？</p>
-                </div>
-                </div>
-            </li>
+                    </div>
+                </li>
+                 <%})%>
+            <% }else{ %>                
+                <li>暂无评论</li>
+            <% } %>
         </ul>
     </body>
-    <script language="javascript">
+    <!--<script language="javascript">
 function getCurDate()
 {
 var d = new Date();
@@ -52,5 +59,5 @@ if(temp<10) return "0"+temp;
 else return temp;
 }
 setInterval("getCurDate()",100);
-</script>
+</script>-->
 </html>

@@ -4,7 +4,9 @@ var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
 var async=require('async');
 var app = express();
-var http =require('http')
+var http =require('http');
+var request=require('request');
+
 
 
 /* GET home page. */
@@ -106,6 +108,8 @@ router.get('/musicdetail', function(req, res, next) {
       //      console.log('success')
       //  });
       //  // app.listen(3000);
+      
+
 
       var conn = db.collection('music');
       //通过id查找相关数据
@@ -114,8 +118,16 @@ router.get('/musicdetail', function(req, res, next) {
          console.log(err)
          return;
        }else{
+          //method=baidu.ting.artist.getInfo&tinguid=877578
+          request("http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.song.lry&songid="+req.query.song_id,function(error, response, body){
+          //console.log(body);
+          var bodys = JSON.parse(body)
+          console.log(bodys);
+          res.render('musicdetail', {results:results[0],email: req.session.email,title:'details',bodys:bodys});
+
+        })
         //console.log(results)
-         res.render('musicdetail', {results:results[0],email: req.session.email,title:'details'});
+         
         //console.log(results)
          db.close();
        }
