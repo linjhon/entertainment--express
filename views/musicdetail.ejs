@@ -28,11 +28,15 @@
 				    <li >流派：<%= results.style %></li>
 					<li class="data_info__item js_public_time">发行时间：<%= results.publishtime %></li>
 				</ul>
+				<button type="button" class="btn btn-success"> 播 放 </button>
+				<a href="/music" type="button" class="btn btn-info"> 更 多 </a>
 		    </div>
 	  </div>
-	  <div class="col-md-4 col-sm-8 col-xs-12"><img src=<%= results.pic_big %> />介绍</div>
+	  <div class="col-md-4 col-sm-8 col-xs-12" style="padding-top: 20px;">
+	<p class="text-primary">本歌曲是歌手 <%= results.author %>  发行于 <%= results.publishtime %>  <br/> 收录于专辑 </p> <p class="text-danger"> <%= results.album_title %></p>
+	  </div>
 	  <div class="col-md-12 col-sm-12 col-xs-12" >
-		  <div style="width:500px; word-break: break-all;">我是歌词我是歌词我是歌词 我是歌词我是歌词我是歌词 我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词我是歌词
+		  <div style="width:500px;padding-top:30px; word-break: break-all;"><%= bodys.lrcContent %>
 		  </div>
 	  </div>
 	</div>

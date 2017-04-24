@@ -34,60 +34,58 @@ body .navbar{
 }
 
 
-/*电影before*/
-  .movie-header{
-    background-size: cover;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    height: 300px;
-  }
-  .movie-header .search{
-    margin-top: 100px;
-    display: flex;
-  }
-  .movie-header .search button{
-    margin-left: 10px;
-    color: #fff;
-    background: none;
-    height: 25px;
-    border: 0;
-    top: 0;
-  }
-  .movie-header .input{
-    height: 25px;
-    border: 0;
-    padding: 0 10px;
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  .movie-header .h3{
-    white-space: nowrap; 
-  }
-  #movie{
-    width: 90%;
-    margin: 0 auto;
-    padding: 50px 0;
-  }
-  #movie .center{
-    text-align:center;
-    overflow: hidden;
-  }
-  #movie .center .box{
-    width: 150px;
-    height: 200px;
-  }
-  #movie .center .h4{
-    height: 40px;
-    line-height: 20px;
-    font-size: 18px;
-  }
-  #movie .center .a{
-    color: #fff;
-  }
-  #movie .center img{
-    margin-top: 10px;
-  }
-/*电影after*/
 
+.movie-header{
+  background-size: cover;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+.movie-header .search{
+  margin-top: 100px;
+  display: flex;
+}
+.movie-header .search button{
+  margin-left: 10px;
+  color: #fff;
+  background: none;
+  height: 25px;
+  border: 0;
+  top: 0;
+}
+.movie-header .input{
+  height: 25px;
+  border: 0;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.movie-header .h3{
+  white-space: nowrap;
+}
+#movie{
+	width: 90%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+#movie .center{
+	text-align:center;
+  overflow: hidden;
+}
+#movie .center .box{
+  width: 150px;
+  height: 200px;
+}
+#movie .center .h4{
+  height: 40px;
+  line-height: 20px;
+  font-size: 18px;
+}
+#movie .center .a{
+  color: #fff;
+}
+#movie .center img{
+	margin-top: 10px;
+}
 
 #navTab{
 	text-align: center;
@@ -179,11 +177,11 @@ body .thumbnail{
     .comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
     .comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
 
-
+/*评论页面css--footer*/
 /* BOOK-起点 */
 
 #book{
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
   padding: 50px 0;
 }
@@ -195,12 +193,13 @@ body .thumbnail{
   width: 150px;
   height: 200px;
   text-align: center;
-  overflow: hidden;
   margin: 0 auto;
 }
 #book .center .box img{
   width: 150px;
   height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #book .center .h4{
   height: 22px;
@@ -228,6 +227,7 @@ body .thumbnail{
   }
 
 
+
   /*首页电影*/
   /*电影图片*/
   .site-piclist_pic {
@@ -246,7 +246,7 @@ body .thumbnail{
 	width:100%;
 	height:100%;
 }
-  /*电影信息 begin*/
+  /*电影信息*/
   .site-piclist_info {
 	line-height:20px;
 	padding:7px 5px 0;
@@ -276,6 +276,7 @@ body .thumbnail{
 	color:#699f00
 }
 .site-piclist_info_describe .icon-user {
+	background:url(//www.qiyipic.com/common/fix/site/icon-user.png) no-repeat 0 0;
 	width:11px;
 	height:11px;
 	margin-right:5px;
@@ -320,20 +321,3 @@ body .thumbnail{
   border-radius: 3px;
   font-family: Georgia;
 }
-
-/*电影信息 end*/
-
-
-
-
-
-
-
-
-
-/*电影详情页 start*/
-
-
-
-
-/*电影详情页 end*/
