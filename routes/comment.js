@@ -31,7 +31,7 @@ router.post('/submit',function(req,res,next){
                 return;
             }else{
                 insertData(db,function(results){
-                    res.redirect('/');
+                    res.redirect('/commentlist');
                     db.close();
                 })
             }
