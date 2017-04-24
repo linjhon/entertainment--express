@@ -152,8 +152,6 @@ body .thumbnail{
 }
 
 
-
-<<<<<<< HEAD
 /*评论页面css*/
 .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
 .commentList .avatar{border: 1px solid transparent;float: left}
@@ -181,7 +179,6 @@ body .thumbnail{
 
 
 
-=======
 /*评论页面css--header*/
 
   .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
@@ -212,7 +209,6 @@ body .thumbnail{
 /* BOOK-起点 */
 
 
->>>>>>> 30b3bb2e098ed635c2c005138d5645e8a62e3f43
 #book{
   width: 90%;
   margin: 0 auto;
@@ -252,13 +248,11 @@ body .thumbnail{
   height: 300px; 
 }
 
-<<<<<<< HEAD
 /*BOOK-到此*/
 
 
 
 
-=======
 /*BOOK-到此*/
 #book .center .h4{
   height: 22px;
@@ -281,20 +275,15 @@ body .thumbnail{
 /*BOOK-到此*/
 
 
->>>>>>> 30b3bb2e098ed635c2c005138d5645e8a62e3f43
 
 .middle{
         position: absolute;
         left: 50%;
         margin-top:20px
   }
-<<<<<<< HEAD
 
 
 
-
-=======
->>>>>>> 30b3bb2e098ed635c2c005138d5645e8a62e3f43
 
 
 
