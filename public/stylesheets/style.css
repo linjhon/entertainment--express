@@ -121,6 +121,7 @@ body .thumbnail{
      width:200px;
      height:200px;
    }
+   
 
 
 .footer{
@@ -187,5 +188,14 @@ body .thumbnail{
   background-position: 0 bottom;
   background-repeat: no-repeat;
   height: 300px; 
+<<<<<<< HEAD
 }
 >>>>>>> 064bd21715ad4ef32c3947aeadad293b0f53934c
+=======
+}}
+.middle{
+        position: absolute;
+        left: 50%;
+        margin-top:20px
+  }
+>>>>>>> 09738fdb575c5935c741501681b3d806803dfa77
