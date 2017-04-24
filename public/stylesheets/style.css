@@ -43,10 +43,28 @@ body .navbar{
 }
 #movie .center{
 	text-align:center;
+  overflow: hidden;
+}
+#movie .center .box{
+  width: 150px;
+  height: 200px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#movie .center .box img{
+  width: 150px;
+  height: 200px;
+}
+#movie .center .h4{
+  height: 40px;
+  line-height: 20px;
+  font-size: 18px;
+}
+#movie .center .a{
+  color: #fff;
 }
 #movie .center img{
-	width: 150px;
-	height: 200px;
 	margin-top: 10px;
 }
 
@@ -82,7 +100,7 @@ body .thumbnail{
   background:#fbfbfd;
   text-align: center;
 }
-.thumbnail img{
+.thumbnail .lazy{
     display: block;
     width: 140px;
     height: 140px;
