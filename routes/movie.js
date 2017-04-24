@@ -127,7 +127,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/moviedetail', function(req, res, next) {
+   req.session.type="moviedetail"
   MongoClient.connect(DB_CONN_STR,function(err,db){ // 利用客户端连接模块进行connect连接操作
+    var detailData={}
     if(err){
       console.log(err);
       return;
@@ -142,14 +144,39 @@ router.get('/moviedetail', function(req, res, next) {
        }else{
         
         //console.log(results)
-         res.render('moviedetail', {results:results[0],
-                  title: 'moviedetail',
-                email:req.session.email,});
+        detailData.results=results[0];        
+        detailData.email= req.session.email;
+        detailData.title='moviedetail';
          db.close();
        }
      });
 
+        //查找电影评论信息;
+     
+      var bookdetaildata={
+        id:req.body.id,
+        type:req.session.type
+      }
+       var commentConn = db.collection('comment');
+      commentConn.find(req.query).sort({_id:-1}).toArray(function(err,results){
+       if(err){
+         console.log(err)
+         return;
+       }else{
         
+        //console.log(results)
+        if(results.length>0){
+          detailData.comment=results;
+        }else{
+          detailData.comment=false;
+        }
+
+         res.render('moviedetail',detailData);
+         //console.log(detailData.comment);
+         db.close();
+       }
+     });
+
     }
   })  
 
