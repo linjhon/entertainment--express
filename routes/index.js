@@ -5,42 +5,35 @@ var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-
+  res.locals.title='index';
+  res.locals.email= req.session.email;
   MongoClient.connect(DB_CONN_STR, function (err, db) { // 利用客户端连接模块进行connect连接操作
     if (err) {
-      res.render('index', {
-        title: 'index',
-        email: req.session.email
-      });
       console.log(err);
       return;
     } else { // 如果连接成功，则执行下面代码 
       
       var resultsList = {}     
-      function findData(item,fn){
-        db.collection(item).find().skip(3).limit(6).toArray(function (err, results) {
-          console.log(item)
+      function findData(item,num,fn){
+        db.collection(item).find().skip(num).limit(6).toArray(function (err, results) {
           if (err) {
             console.log(err)
             return;
           } else {            
             resultsList[item]=results;
+            res.locals.resultsList=resultsList;
             fn(resultsList)
             db.close();
           }
         })
       }
 
-      findData('music',function(){
+      findData('music',0,function(){
       })
-      findData('movie',function(){  
+      findData('movie',3,function(){  
       })
-      findData('book',function(){
-        res.render('index', {
-          title: 'index',
-          email: req.session.email,
-          resultsList: resultsList
-        })
+      findData('book',3,function(){
+        res.render('index');
         console.log(resultsList.movie[0].title)
       })
         

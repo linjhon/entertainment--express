@@ -334,11 +334,11 @@ body .thumbnail{
     position: absolute;
     bottom: 0;
     left: 0;
-    width:42px;
+    padding:0 5px;
     height:18px;
 }
 .site-piclist_icons-lb span{
-  margin:5px;
+  margin:0 0 5px 0px;
   color:#fff;
   background-color:rgba(0,0,0,.5);
   display: inline-block;
