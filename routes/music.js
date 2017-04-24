@@ -95,7 +95,7 @@ router.get('/musicdetail', function(req, res, next) {
          return;
        }else{
         
-        console.log(results)
+        //console.log(results)
          res.render('musicdetail', {results:results[0]});
          db.close();
        }
