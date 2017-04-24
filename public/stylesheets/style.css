@@ -197,7 +197,8 @@ body .thumbnail{
   margin-top: 10px;
 }
 .book-header{
-  background-size:  100%;
+
+  background-size:cover;
   background-position: 0 bottom;
   background-repeat: no-repeat;
   height: 300px; 
