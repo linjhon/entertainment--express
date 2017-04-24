@@ -10,15 +10,16 @@
   </head>
   <body>
 
-  <%- include header %>
    <%= title %>
-   <form action="/comment/submit" method="post" id="frmDemo">
-    标题:<input type="text" name="title"/>
-    <br/>
-    内容:<textarea rows="20" cols="80" name="content" id="content"></textarea>
-    <br/>
-    <br/>
-    <input type="submit" name="submit" value="提交">
+   <form action="/comment" method="get" id="frmDemo">
+      标题:<input type="text" name="title"/>
+      <br/>
+      内容:<textarea rows="20" cols="80" name="content" id="content"></textarea>
+      <br/>
+          <input type="text" value="<%= title %>" name="type" class="hidden"/>
+          <input type="text" value="<%= id %>" name="id" class="hidden"/>
+      <br/>
+      <input type="submit" name="submit" value="提交">
    </form>
 
    <script type="text/javascript">

@@ -72,7 +72,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/bookdetail', function(req, res, next) {
+  req.session.type="bookdetail"
   MongoClient.connect(DB_CONN_STR,function(err,db){ // 利用客户端连接模块进行connect连接操作
+    var detailData={}
     if(err){
       console.log(err);
       return;
@@ -80,6 +82,7 @@ router.get('/bookdetail', function(req, res, next) {
     
       var conn = db.collection('book');
       console.log(req.query)
+      //查找书籍信息
       conn.find(req.query).toArray(function(err,results){
        if(err){
          console.log(err)
@@ -87,7 +90,35 @@ router.get('/bookdetail', function(req, res, next) {
        }else{
         
         //console.log(results)
-         res.render('bookdetail', {results:results[0],email: req.session.email,title:'bookdetail'});
+        detailData.results=results[0];        
+        detailData.email= req.session.email;
+        detailData.title='bookdetail';
+         //res.render('bookdetail', {results:results[0],email: req.session.email,title:'bookdetail'});
+         db.close();
+       }
+     });
+     //查找书籍评论信息;
+     
+      var bookdetaildata={
+        id:req.body.id,
+        type:req.session.type
+      }
+       var commentConn = db.collection('comment');
+      commentConn.find(req.query).toArray(function(err,results){
+       if(err){
+         console.log(err)
+         return;
+       }else{
+        
+        //console.log(results)
+        if(results.length>0){
+          detailData.comment=results;
+        }else{
+          detailData.comment=false;
+        }
+
+         res.render('bookdetail',detailData);
+         console.log(detailData.comment);
          db.close();
        }
      });

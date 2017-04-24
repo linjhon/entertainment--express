@@ -70,5 +70,11 @@ router.get('/logout', function (req, res, next) {
     res.redirect('/');
   })
 })
+router.get('/commentlist', function (req, res, next) {
+  res.render('commentlist', {
+    title: '评论列表',
+    email: req.session.email
+  })
+})
 
 module.exports = router;

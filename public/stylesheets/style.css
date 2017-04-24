@@ -154,6 +154,7 @@ body .thumbnail{
 }
 
 
+
 /*评论页面css--header*/
 
   .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
@@ -179,8 +180,11 @@ body .thumbnail{
     .comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
     .comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
 
+/*评论页面css--footer*/
+
 
 /* BOOK-起点 */
+
 
 #book{
   width: 1000px;
@@ -221,6 +225,9 @@ body .thumbnail{
 }
 
 /*BOOK-到此*/
+
+
+
 .middle{
         position: absolute;
         left: 50%;
@@ -234,7 +241,7 @@ body .thumbnail{
 	position:relative;
 	width:100%;  
 	height:100%
-
+	
 }
 .site-piclist_pic_link {
 	display:block;
@@ -281,7 +288,7 @@ body .thumbnail{
 	margin-right:5px;
 	display:inline-block;
 	vertical-align:middle;
-	margin-top:5px
+	_margin-top:5px
 }
 
 .site-piclist .site-title_score {
@@ -322,13 +329,6 @@ body .thumbnail{
 }
 
 /*电影信息 end*/
-
-
-
-
-
-
-
 
 
 /*电影详情页 start*/
