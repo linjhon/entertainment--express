@@ -35,7 +35,12 @@ body .navbar{
 
 
 
-
+.movie-header{
+  background-size:  100%;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  height: 300px;
+}
 #movie{
 	width: 1000px;
 	margin: 0 auto;
