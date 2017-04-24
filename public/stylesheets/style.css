@@ -36,7 +36,7 @@ body .navbar{
 
 
 .movie-header{
-  background-size:  100%;
+  background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
   height: 300px;
@@ -58,6 +58,9 @@ body .navbar{
   border: 0;
   padding: 0 10px;
   background-color: rgba(255, 255, 255, 0.3);
+}
+.movie-header .h3{
+  white-space: nowrap;
 }
 #movie{
 	width: 90%;
