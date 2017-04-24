@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
   secret:'recommend 128 bytes random string', 
-  cookie:{maxAge:20*60*1000}, // 20分钟 ,毫秒为单位
+  cookie:{maxAge:30*60*1000}, // 20分钟 ,毫秒为单位
   resave:false,  // 如果来了一个新的请求，不管原来存在不存在，重新存储一个
   saveUninitialized:true // 存储一些未初始化的session内容
 }))

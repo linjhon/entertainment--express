@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
-  </head>
-  <body>
-    <%- include header %>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+</head>
+
+<body>
+  <%- include header %>
     <%- include banner %>
-    <div class="container">
-      <div class="hot-movie">
-        <h2 class="text-center">热门电影</h2>
+      <div class="container">
+        <div class="hot-movie">
+          <h2 class="text-center">最新电影</h2>
+          <ul class="list-unstyled site-piclist clearfix">
+            <% resultsList.movie.forEach(function(item,inx){ %>
+            <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+              <div class="site-piclist_pic">
+                <a class="site-piclist_pic_link" href="./movie/moviedetail?id=<%= item.id %>" title="<%= item.title %>"
+                  alt="<%= item.title %>" pos="1" target="_blank">
+                  <img title="<%= item.title %>" class="img-responsive" alt="<%= item.title %>" src="<%= item.images.large %>"
+                    rseat="img2" height="236" width="180">
+                  <p class="site-piclist_icons-lb">
+                    <span><%= item.year %></span>
+                  </p>
+                </a>
+              </div>
+              <div class="site-piclist_info">
+                <div class="site-title_score">
+                  <span class="score"><strong ></strong><%- item.rating.average %></span>
+                  <div class="title">
+                    <p class="site-piclist_info_title">
+                      <a target="_blank"  alt="" title="" href="./movie/moviedetail?id=<%= item.id %>"
+                        pos="2"><%= item.title %></a>
+                    </p>
+                  </div>
+                </div>
+                <p class="site-piclist_info_describ1e">
+                  <% item.genres.forEach(function(list,inx){ %>
+                    <span class="label label-info"><%= list %></span>
+                  <% }) %>
+                </p>
+              </div>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+
+
       </div>
-    
-      
-    </div>
-    <%- include footer %>
-    <script src="/javascripts/jquery-1.11.3.js"></script>
-    <script src="/javascripts/bootstrap.js"></script>
-  </body>
+      <%- include footer %>
+        <script src="/javascripts/jquery-1.11.3.js"></script>
+        <script src="/javascripts/bootstrap.js"></script>
+        <script>
+          $.ajax({
+            url: 'http://api.douban.com/v2/movie/in_theaters',
+            success: function (res) {
+              console.log(res)
+            }
+          })
+        </script>
+</body>
+
 </html>
