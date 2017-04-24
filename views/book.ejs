@@ -3,46 +3,50 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
   </head>
   <body>
-    <%- include header %>
+  <%- include header %>
     <header class="main-header" style="background-image: url(images/1492673792372face02.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12"> 
-                    <h3>万千歌手 近在眼前</h3>
+                    <h3>热门电子版书籍</h3>
                 </div>
             </div>
         </div>
     </header>
-    <div class="row" id="box">
-      <% list.forEach(function(item,idx){ %>
-        <div class="col-sm-4 col-md-3 col-xs-6">
-          <div class="thumbnail">
-            <img class="lazy" width="200" height="200" src="/images/upload/load.jpg" data-original="<%- item.pic_big %>"">
-            <div class="caption top">
-              <a href="./musicdetail?id=<%= item._id %>"><%- item.title %></a>
-            </div>
-          </div>
-        </div>
-     <%})%>
-    </div>
+
+	 <div class="row" id="book">
+	 <% list.forEach(function(item,idx){ %>
+	  <div class="col-sm-6 col-md-3 center">
+	    <div class="thumbnail">
+	      <div class="box"><img  src="/images/book-loading1.gif" data-original="<%= item.images.large %>" id="<%- item.id %>" /></div>
+	      <div class="caption">
+	        <h5 class="h4">《<%- item.title %>》</h5>
+	        <p><a href="#" class="btn btn-primary a" role="button">查看详情</a></p>
+	      </div>
+	    </div>
+	  </div>
+	  <% }) %>
+	</div>
+
+
     <nav aria-label="..." class="container text-center">
       <ul class="pagination">
         <li class="">
-          <a href="./music?pageNo=<%= pageNo > 1 ? parseInt(pageNo)-1: 1 %>">
+          <a href="./book?pageNo=<%= pageNo > 1 ? parseInt(pageNo)-1: 1 %>">
               上一页
           </a>
         </li>
         <% for(var i=1;i<=totalPages;i++){ %>
              <li class="<%- i==pageNo? 'active':'' %>">
-                <a href="./music?pageNo=<%= i %>" ><%- i %></a href="">
+                <a href="./book?pageNo=<%= i %>" ><%- i %></a href="">
               </li>
         <%}%>
         <li class="">
           <span>
-            <a aria-hidden="true" href="./music?pageNo=<%= pageNo < totalPages ? parseInt(pageNo)+1: totalPages %>">下一页</a>
+            <a aria-hidden="true" href="./book?pageNo=<%= pageNo < totalPages ? parseInt(pageNo)+1: totalPages %>">下一页</a>
           </span>
         </li>
       </ul>
@@ -53,7 +57,7 @@
     <script src="/javascripts/bootstrap.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(function() {
-          $("img.lazy").lazyload({effect: "fadeIn",container:$('#box')});
+          $("img").lazyload({effect: "fadeIn",container:$('#book')});
       }); 
     </script>
   </body>

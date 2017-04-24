@@ -129,3 +129,35 @@ body .thumbnail{
   line-height:50px;
   background-color: #f5f5f5;
 }
+
+#book{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+#book .center{
+  text-align:center;
+  overflow: hidden;
+}
+#book .center .box{
+  width: 150px;
+  height: 200px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#book .center .box img{
+  width: 150px;
+  height: 200px;
+}
+#book .center .h4{
+  height: 40px;
+  line-height: 20px;
+  font-size: 18px;
+}
+#book .center .a{
+  color: #fff;
+}
+#book .center img{
+  margin-top: 10px;
+}
