@@ -142,7 +142,9 @@ router.get('/moviedetail', function(req, res, next) {
        }else{
         
         //console.log(results)
-         res.render('moviedetail', {results:results[0]});
+         res.render('moviedetail', {results:results[0],
+                  title: 'moviedetail',
+                email:req.session.email,});
          db.close();
        }
      });
