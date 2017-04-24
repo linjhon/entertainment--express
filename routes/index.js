@@ -14,35 +14,37 @@ router.get('/', function (req, res, next) {
       console.log(err);
       return;
     } else { // 如果连接成功，则执行下面代码 
-      function getData(collectArr, fn) {
-        var resultsList = {}
-        for (var i = 0; i < collectArr.length; i++) {
-          console.log(i)
-          db.collection(collectArr[i]).find().limit(6).toArray(function (err, results) {
-            console.log(i)
-            console.log(collectArr[i])
-            if (err) {
-              console.log(err)
-              return;
-            } else {
-              //resultsList.collectArr[i]=results;
-              fn(resultsList)
-              db.close();
-            }
-          })
-        }
+      
+      var resultsList = {}     
+      function findData(item,fn){
+        db.collection(item).find().skip(3).limit(6).toArray(function (err, results) {
+          console.log(item)
+          if (err) {
+            console.log(err)
+            return;
+          } else {            
+            resultsList[item]=results;
+            fn(resultsList)
+            db.close();
+          }
+        })
       }
-      getData(['music'], function (data) {
+
+      findData('music',function(){
+      })
+      findData('movie',function(){  
+      })
+      findData('book',function(){
         res.render('index', {
           title: 'index',
           email: req.session.email,
-          resultsList: data
+          resultsList: resultsList
         })
-        console.log(data)
+        console.log(resultsList.movie[0].title)
       })
-    }
+        
+    }    
   })
-
 
 
 
