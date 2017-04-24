@@ -28,12 +28,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
 app.use(session({
   secret:'recommend 128 bytes random string', 
   cookie:{maxAge:20*60*1000}, // 20分钟 ,毫秒为单位
-  resave:true,  // 如果来了一个新的请求，不管原来存在不存在，重新存储一个
+  resave:false,  // 如果来了一个新的请求，不管原来存在不存在，重新存储一个
   saveUninitialized:true // 存储一些未初始化的session内容
 }))
+
+app.use(function(req, res, next){//只要在一定的时间内页面一直保持活动状态，session就不会过期。
+  req.session._garbage = Date();
+  req.session.touch();
+  next();
+});
+
 app.use('/', index);
 app.use('/users', users);
 app.use('/book', book);
