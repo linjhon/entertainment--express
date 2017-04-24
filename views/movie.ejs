@@ -7,11 +7,11 @@
   </head>
   <body>
   <%- include header %>
-    <header class="main-header" style="background-image: url(images/1492673792372face02.jpg)">
+    <header class="movie-header" style="background-image: url(images/movie-banner.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12"> 
-                    <h3>万千歌手 近在眼前</h3>
+                    <h3>电影资讯</h3>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
 	      <div class="caption">
 	        <h4 class="h4"><%- item.title %></h4>
 	        <p>评分：<%- item.rating.average %></p>
-	        <p><a href="#" class="btn btn-primary a" role="button">查看详情</a></p>
+	        <p><a href="#<%- item.id %>" class="btn btn-primary a" role="button">查看详情</a></p>
 	      </div>
 	    </div>
 	  </div>

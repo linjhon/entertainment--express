@@ -70,4 +70,9 @@ router.get('/', function(req, res, next) {
   })
   //title值，请勿修改，头部组件判断使用;
 });
+
+router.get('/moviedetail', function(req, res, next) {
+    res.render('moviedetail', {});
+});
+
 module.exports = router;
