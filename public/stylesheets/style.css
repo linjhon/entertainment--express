@@ -153,6 +153,35 @@ body .thumbnail{
 
 
 
+<<<<<<< HEAD
+/*评论页面css*/
+.commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
+.commentList .avatar{border: 1px solid transparent;float: left}
+.comment-main{position:relative;margin-left:64px;border:1px solid #dedede;border-radius:2px}
+.comment-main:before,.comment-main:after{position:absolute;top:11px;left:-16px;right:100%;width:0;height:0;display:block;content:" ";border-color:transparent;border-style:solid solid outset;pointer-events:none}
+.comment-main:before{border-right-color:#dedede;border-width:8px}
+.comment-main:after{border-width:7px;border-right-color:#f8f8f8;margin-top:1px;margin-left:2px}
+.comment-header{padding:10px 15px;background:#f8f8f8;border-bottom:1px solid #eee}
+.comment-title{margin:0 0 8px 0;font-size:1.6rem;line-height:1.2}
+.comment-meta{font-size:13px;color:#999;line-height:1.2}
+.comment-meta a{color:#999}
+.comment-author{font-weight:700;color:#999}
+.comment-body{padding:15px;overflow:hidden}
+.comment-body>:last-child{margin-bottom:0}
+.commentList .comment-flip .avatar {float: right}
+.comment-flip .comment-main{margin-left: 0; margin-right: 64px}
+.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
+.comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
+.comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
+	.comment-flip .comment-main{margin-left: 0; margin-right: 64px}
+	.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
+	.comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
+	.comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
+/* BOOK-起点 */
+
+
+
+=======
 /*评论页面css--header*/
 
   .commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
@@ -183,6 +212,7 @@ body .thumbnail{
 /* BOOK-起点 */
 
 
+>>>>>>> 30b3bb2e098ed635c2c005138d5645e8a62e3f43
 #book{
   width: 90%;
   margin: 0 auto;
@@ -222,6 +252,13 @@ body .thumbnail{
   height: 300px; 
 }
 
+<<<<<<< HEAD
+/*BOOK-到此*/
+
+
+
+
+=======
 /*BOOK-到此*/
 #book .center .h4{
   height: 22px;
@@ -244,12 +281,20 @@ body .thumbnail{
 /*BOOK-到此*/
 
 
+>>>>>>> 30b3bb2e098ed635c2c005138d5645e8a62e3f43
 
 .middle{
         position: absolute;
         left: 50%;
         margin-top:20px
   }
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 30b3bb2e098ed635c2c005138d5645e8a62e3f43
 
 
 
@@ -334,11 +379,11 @@ body .thumbnail{
     position: absolute;
     bottom: 0;
     left: 0;
-    width:42px;
+    padding:0 5px;
     height:18px;
 }
 .site-piclist_icons-lb span{
-  margin:5px;
+  margin:0 0 5px 0px;
   color:#fff;
   background-color:rgba(0,0,0,.5);
   display: inline-block;
