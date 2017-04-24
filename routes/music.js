@@ -4,6 +4,8 @@ var MongoClient = require('mongodb').MongoClient;
 var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
 var async=require('async');
 var app = express();
+var http =require('http')
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -96,21 +98,23 @@ router.get('/musicdetail', function(req, res, next) {
       //     res.header("Content-Type", "application/json;charset=utf-8");
       //     next();
       // });
-      //  app.get('http://tingapi.ting.baidu.com/v1/restserver/ting', function(req, res) {
+      // //?method=baidu.ting.song.lry&songid=877578
+      //  app.get('http://tingapi.ting.baidu.com/v1/restserver/ting/?method=baidu.ting.song.lry&songid=877578', function(req, res) {
       //      res.send();
+      //       console.log(req)
+      //       console.log(res)
       //      console.log('success')
       //  });
       //  // app.listen(3000);
 
       var conn = db.collection('music');
-      console.log(req.query);
       //通过id查找相关数据
       conn.find(req.query).toArray(function(err,results){
        if(err){
          console.log(err)
          return;
        }else{
-        console.log(results)
+        //console.log(results)
          res.render('musicdetail', {results:results[0],email: req.session.email,title:'details'});
         //console.log(results)
          db.close();
