@@ -23,7 +23,7 @@
             <% } %>
             <p>出版年：<strong><%= results.pubdate %></strong></p>
             <p>页数：<strong><%= results.pages %></strong></p>
-            <p>定价：<strong><%= results.price %>元</strong></p>
+            <p>定价：<strong><%= results.price %></strong></p>
             <p>装帧：<strong><%= results.binding %></strong></p>
                      
 	      </div>
@@ -32,10 +32,8 @@
 	  </div>
       
       <div class="btn col-md-12"><input type="button" value="我来说两句" onclick="location.href='/comment'"></div>
-<<<<<<< HEAD
-      <%- include commentlist %>
-=======
+      
     </div>
->>>>>>> 7abaab414727a3e5204d230a044a811067cf02de
+    <%- include commentlist %>
 </body>
 </html>
