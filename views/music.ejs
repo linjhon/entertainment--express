@@ -12,6 +12,14 @@
             <div class="row">
                 <div class="col-sm-12"> 
                     <h3>万千歌手 近在眼前</h3>
+                    <div class="col-lg-6">
+                      <div class="input-group middle">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                          <button class="btn btn-default" type="button">搜索</button>
+                        </span>
+                      </div><!-- /input-group -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,7 +30,7 @@
           <div class="thumbnail">
             <img class="lazy" width="200" height="200" src="/images/upload/load.jpg" data-original="<%- item.pic_big %>"">
             <div class="caption top">
-              <a href="./music/musicdetail?song_id=<%= item.song_id %>"><%- item.title %></a>
+              <a href="./music/musicdetail?id=<%= item._id %>"><%- item.title %></a>
             </div>
           </div>
         </div>
