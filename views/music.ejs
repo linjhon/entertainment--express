@@ -13,12 +13,12 @@
                 <div class="col-sm-12"> 
                     <h3>万千歌手 近在眼前</h3>
                     <div class="col-lg-6">
-                      <div class="input-group middle">
-                        <input type="text" class="form-control" placeholder="Search for...">
+                      <form class="input-group middle" action="./music/musicdetail" method="get">
+                        <input type="text" class="form-control" name="title" placeholder="Search for...">
                         <span class="input-group-btn">
-                          <button class="btn btn-default" type="button">搜索</button>
+                          <button class="btn btn-default" type="submit">搜索</button>
                         </span>
-                      </div><!-- /input-group -->
+                      </form><!-- /input-group -->
                     </div>
                 </div>
             </div>
@@ -62,9 +62,10 @@
     <script type="text/javascript" charset="utf-8">
       $(function() {
           $("img.lazy").lazyload({effect: "fadeIn",container:$('#box')});
-          $('.btn').on('click',function(){
-              window.location.href="./music/musicdetail?id='+$('.form-control').value()+'"
-          })
+          // $('.btn').on('click',function(){
+          //   //alert($('.form-control').val())
+          //     window.location.href='./music/musicdetail?title='+$('.form-control').val()
+          // })
       }); 
     </script>
   </body>
