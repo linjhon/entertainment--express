@@ -130,6 +130,7 @@ router.get('/moviedetail', function(req, res, next) {
          db.close();
        }
      });
+
     }
   })
 
