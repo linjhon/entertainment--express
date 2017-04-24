@@ -18,7 +18,12 @@
       <img src="<%- results.images.large %>" alt="">
     </a>
   </div>
-  ...
+            <p>片名：<strong><%= results.title %></strong></p>
+           
+            <p>出品年份：<strong><%= results.year %></strong></p>
+            <p>主演：<strong><%= results.casts[0].name %></strong>&nbsp;&nbsp;<strong><%= results.casts[1].name %></strong>&nbsp;&nbsp;<strong><%= results.casts[2].name %></strong></p>
+            <p>类型：<strong><%= results.genres %>元</strong></p>
+            <p>导演：<strong><%= results.directors[0].name %></strong></p>
 </div>
     </div>
 
