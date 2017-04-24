@@ -62,6 +62,9 @@
     <script type="text/javascript" charset="utf-8">
       $(function() {
           $("img.lazy").lazyload({effect: "fadeIn",container:$('#box')});
+          $('.btn').on('click',function(){
+              window.location.href="./music/musicdetail?id='+$('.form-control').value()+'"
+          })
       }); 
     </script>
   </body>

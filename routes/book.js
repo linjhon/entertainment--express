@@ -87,7 +87,7 @@ router.get('/bookdetail', function(req, res, next) {
        }else{
         
         //console.log(results)
-         res.render('bookdetail', {results:results[0]});
+         res.render('bookdetail', {results:results[0],email: req.session.email,title:'bookdetail'});
          db.close();
        }
      });
