@@ -105,7 +105,7 @@ router.get('/moviedetail', function(req, res, next) {
        }
      });
 
-<<<<<<< HEAD
+
         //查找电影评论信息;
      
       var bookdetaildata={
@@ -131,8 +131,7 @@ router.get('/moviedetail', function(req, res, next) {
          db.close();
        }
      });
-=======
->>>>>>> 901b3d2b191936a13ca00a9e7901f4ab629604c5
+
 
     }
   })
