@@ -121,6 +121,7 @@ body .thumbnail{
      width:200px;
      height:200px;
    }
+   
 
 
 .footer{
@@ -160,3 +161,8 @@ body .thumbnail{
 #book .center img{
   margin-top: 10px;
 }
+.middle{
+        position: absolute;
+        left: 50%;
+        margin-top:20px
+  }
