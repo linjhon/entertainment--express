@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var MongoClient= require('mongodb').MongoClient;
 var DB_CONN_STR = 'mongodb://10.31.155.62:27017/happy';
+var async = require('async');
 
 router.get('/', function(req, res, next) {  // controller
    res.render('comment',{title:'评论',email:req.session.email})
@@ -87,7 +88,7 @@ router.get('/list',function(req,res){
             })
 
 
-        }
+         }
 
 
         MongoClient.connect(DB_CONN_STR,function(err,db){
