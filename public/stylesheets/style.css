@@ -160,3 +160,9 @@ body .thumbnail{
 #book .center img{
   margin-top: 10px;
 }
+.book-header{
+  background-size:  100%;
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  height: 300px; 
+}
