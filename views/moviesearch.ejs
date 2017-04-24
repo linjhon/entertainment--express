@@ -19,14 +19,13 @@
     </header>
 
 	 <div class="row" id="movie">
-	 <% list.forEach(function(item,idx){ %>
+	 <% body.forEach(function(item,idx){ %>
 	  <div class="col-sm-6 col-md-3 center">
 	    <div class="thumbnail">
-	      <img class="box" src="/images/movie-loading1.gif" data-original="<%= item.images.large %>" id="<%- item.id %>" />
+	      <img class="box" src="/images/movie-loading1.gif" data-original="<%= item.img %>" id="" />
 	      <div class="caption">
 	        <h4 class="h4"><%- item.title %></h4>
-	        <p>评分：<%- item.rating.average %></p>
-	        <p><a href="./movie/moviedetail?id=<%= item.id %>" class="btn btn-primary a" role="button">查看详情</a></p>
+	        <p><a href="" class="btn btn-primary a" role="button">查看详情</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -34,25 +33,6 @@
 	</div>
 
 
-    <nav aria-label="..." class="container text-center">
-      <ul class="pagination">
-        <li class="">
-          <a href="./movie?pageNo=<%= pageNo > 1 ? parseInt(pageNo)-1: 1 %>">
-              上一页
-          </a>
-        </li>
-        <% for(var i=1;i<=totalPages;i++){ %>
-             <li class="<%- i==pageNo? 'active':'' %>">
-                <a href="./movie?pageNo=<%= i %>" ><%- i %></a href="">
-              </li>
-        <%}%>
-        <li class="">
-          <span>
-            <a aria-hidden="true" href="./movie?pageNo=<%= pageNo < totalPages ? parseInt(pageNo)+1: totalPages %>">下一页</a>
-          </span>
-        </li>
-      </ul>
-    </nav>
     <%- include footer %>
     <script src="/javascripts/jquery-1.11.3.js"></script>
     <script src="/javascripts/jquery.lazyload.js"></script>
