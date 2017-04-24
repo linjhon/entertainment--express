@@ -86,7 +86,7 @@ router.get('/bookdetail', function(req, res, next) {
          return;
        }else{
         
-        console.log(results)
+        //console.log(results)
          res.render('bookdetail', {results:results[0]});
          db.close();
        }
