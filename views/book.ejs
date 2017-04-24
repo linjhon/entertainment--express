@@ -21,10 +21,10 @@
 	 <% list.forEach(function(item,idx){ %>
 	  <div class="col-sm-6 col-md-3 center">
 	    <div class="thumbnail">
-	      <div class="box"><img  src="/images/book-loading1.gif" data-original="<%= item.images.large %>" id="<%- item.id %>" /></div>
+	      <div class="box"><a href="./book/bookdetail?id=<%= item.id %>"><img  src="/images/book-loading1.gif" data-original="<%= item.images.large %>" id="<%- item.id %>" /></a></div>
 	      <div class="caption">
-	        <h5 class="h4">《<%- item.title %>》</h5>
-	        <p><a href="./book/bookdetail?id=<%= item.id %>" class="btn btn-success a" role="button">查看详情</a></p>
+	      <p class="h4" style="width:185px;overflow: hidden;text-overflow: ellipsis;">《<a href="./book/bookdetail?id=<%= item.id %>" class="text-nowrap" ><%- item.title %></a>》</p>
+	        <p style="width:185px;overflow: hidden;text-overflow: ellipsis;" class="text-nowrap">作者:<%- item.author %></p>
 	      </div>
 	    </div>
 	  </div>
