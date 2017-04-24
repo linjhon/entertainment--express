@@ -175,6 +175,7 @@ body .thumbnail{
 	.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
 	.comment-flip .comment-main:before, .comment-flip .comment-main:after {left: 100%;position: absolute;right: -16px}
 	.comment-flip .comment-main:after {border-left-color: #f8f8f8;border-right-color: transparent;margin-left: auto;margin-right: 2px}
+/* BOOK-起点 */
 #book{
   width: 1000px;
   margin: 0 auto;
@@ -212,7 +213,7 @@ body .thumbnail{
   background-repeat: no-repeat;
   height: 300px; 
 }
-
+/*BOOK-到此*/
 
 .middle{
         position: absolute;
