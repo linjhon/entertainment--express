@@ -213,13 +213,11 @@ body .thumbnail{
   height: 300px; 
 }
 
-}
 
 .middle{
         position: absolute;
         left: 50%;
         margin-top:20px
-  }
   }
 
 
@@ -242,7 +240,7 @@ body .thumbnail{
 	width:100%;
 	height:100%;
 }
-  /*电影信息*/
+  /*电影信息 begin*/
   .site-piclist_info {
 	line-height:20px;
 	padding:7px 5px 0;
@@ -272,7 +270,6 @@ body .thumbnail{
 	color:#699f00
 }
 .site-piclist_info_describe .icon-user {
-	background:url(//www.qiyipic.com/common/fix/site/icon-user.png) no-repeat 0 0;
 	width:11px;
 	height:11px;
 	margin-right:5px;
@@ -317,3 +314,5 @@ body .thumbnail{
   border-radius: 3px;
   font-family: Georgia;
 }
+
+/*电影信息 end*/
