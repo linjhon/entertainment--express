@@ -3,42 +3,58 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
   </head>
   <body>
-  <%- include header %>
-    <div class="row" id="movie">
-	  <div class="col-sm-6 col-md-3 center">
-	    <div class="thumbnail">
-	      <img src="" alt="">
-	      <div class="caption">
-	        <h5>《锅匠、裁缝、士兵和间谍》</h5>
-	        <p>评分：9.9</p>
-	        <p><a href="#" class="btn btn-primary" role="button">查看详情</a></p>
-	      </div>
-	    </div>
-	  </div>
-
-	</div>
-
-	<nav aria-label="Page navigation" id="navTab">
-	  <ul class="pagination">
-	    <li>
-	      <a href="#" aria-label="Previous">
-	        <span aria-hidden="true">&laquo;</span>
-	      </a>
-	    </li>
-	    <li><a href="#">1</a></li>
-	    <li><a href="#">2</a></li>
-	    <li><a href="#">3</a></li>
-	    <li><a href="#">4</a></li>
-	    <li><a href="#">5</a></li>
-	    <li>
-	      <a href="#" aria-label="Next">
-	        <span aria-hidden="true">&raquo;</span>
-	      </a>
-	    </li>
-	  </ul>
-	</nav>
+    <%- include header %>
+    <header class="main-header" style="background-image: url(images/1492673792372face02.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12"> 
+                    <h3>万千歌手 近在眼前</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row" id="box">
+      <% list.forEach(function(item,idx){ %>
+        <div class="col-sm-4 col-md-3 col-xs-6">
+          <div class="thumbnail">
+            <img class="lazy" width="200" height="200" src="/images/upload/load.jpg" data-original="<%- item.pic_big %>"">
+            <div class="caption top">
+              <a href="./musicdetail?id=<%= item._id %>"><%- item.title %></a>
+            </div>
+          </div>
+        </div>
+     <%})%>
+    </div>
+    <nav aria-label="..." class="container text-center">
+      <ul class="pagination">
+        <li class="">
+          <a href="./music?pageNo=<%= pageNo > 1 ? parseInt(pageNo)-1: 1 %>">
+              上一页
+          </a>
+        </li>
+        <% for(var i=1;i<=totalPages;i++){ %>
+             <li class="<%- i==pageNo? 'active':'' %>">
+                <a href="./music?pageNo=<%= i %>" ><%- i %></a href="">
+              </li>
+        <%}%>
+        <li class="">
+          <span>
+            <a aria-hidden="true" href="./music?pageNo=<%= pageNo < totalPages ? parseInt(pageNo)+1: totalPages %>">下一页</a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+    <%- include footer %>
+    <script src="/javascripts/jquery-1.11.3.js"></script>
+    <script src="/javascripts/jquery.lazyload.js"></script>
+    <script src="/javascripts/bootstrap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+          $("img.lazy").lazyload({effect: "fadeIn",container:$('#box')});
+      }); 
+    </script>
   </body>
 </html>
