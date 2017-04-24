@@ -36,7 +36,7 @@ body .navbar{
 
 
 .movie-header{
-  background-size:  100%;
+  background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
   height: 300px;
@@ -59,8 +59,11 @@ body .navbar{
   padding: 0 10px;
   background-color: rgba(255, 255, 255, 0.3);
 }
+.movie-header .h3{
+  white-space: nowrap;
+}
 #movie{
-	width: 1000px;
+	width: 90%;
 	margin: 0 auto;
 	padding: 50px 0;
 }
@@ -197,7 +200,8 @@ body .thumbnail{
   margin-top: 10px;
 }
 .book-header{
-  background-size:  100%;
+
+  background-size:cover;
   background-position: 0 bottom;
   background-repeat: no-repeat;
   height: 300px; 
