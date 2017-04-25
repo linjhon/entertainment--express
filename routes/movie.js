@@ -94,7 +94,6 @@ router.get('/moviedetail', function(req, res, next) {
          console.log(err)
          return;
        }else{
-        
         //console.log(results)
          res.render('moviedetail', {results:results[0],
                   title: 'moviedetail',
@@ -114,8 +113,9 @@ router.get('/moviedetail', function(req, res, next) {
 });
 
 router.get('/search',function (req, res, next) {
-	//console.log(req.query);
-	request("https://movie.douban.com/j/subject_suggest?q="+req.query,function(error, response, body){
+	console.log(req.query.search);
+	var nav=encodeURI(req.query.search);
+	request("https://movie.douban.com/j/subject_suggest?q="+nav,function(error, response, body){
 		var $body=JSON.parse(body)
     	console.log($body);
     	res.render('moviesearch',{body:$body, title: 'moviesearch',email:req.session.email});
