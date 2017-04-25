@@ -85,13 +85,13 @@
               <% }) %>
           </ul>
         </div>
-        <div class="hot-music">
+        <div class="hot-book">
           <h2 class="text-center">经典好书</h2>
           <ul class="list-unstyled site-piclist clearfix">
             <% resultsList.book.forEach(function(item,inx){ %>
               <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
                 <div class="site-piclist_pic">
-                  <a class="site-piclist_pic_link" href="./movie/moviedetail?id=<%= item.id %>" title="<%= item.title %>" alt="<%= item.title %>"
+                  <a class="site-piclist_pic_link" href="./book/bookdetail?id=<%= item.id %>" title="<%= item.title %>" alt="<%= item.title %>"
                     pos="1" target="_blank">
                   <img title="<%= item.title %>" class="img-responsive" alt="<%= item.title %>" src="<%= item.images.large %>"
                     rseat="img2" height="236" width="180">
@@ -105,7 +105,7 @@
                     <span class="score"><strong ></strong><%- item.rating.average %></span>
                     <div class="title">
                       <p class="site-piclist_info_title">
-                        <a target="_blank" alt="" title="" href="./movie/moviedetail?id=<%= item.id %>" pos="2">
+                        <a target="_blank" alt="" title="" href="./book/bookdetail?id=<%= item.id %>" pos="2">
                           <%= item.title %>
                         </a>
                       </p>
