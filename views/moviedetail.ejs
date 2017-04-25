@@ -42,6 +42,8 @@
 
       <hr>
     </div>
-	
+    <%-include("commentlist",{id:results.id,comment:comment}) %>
+
+    <%-include("comment",{id:results.id})%>
 </body>
 </html>
